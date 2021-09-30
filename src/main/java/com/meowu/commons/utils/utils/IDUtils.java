@@ -33,6 +33,6 @@ public class IDUtils{
             leastSigBits = leastSigBits << 8 | (long) (randomBytes[i] & 255);
         }
 
-        return new UUID(mostSigBits, leastSigBits).toString();
+        return new UUID(mostSigBits, leastSigBits).toString().replaceAll("-", "");
     }
 }

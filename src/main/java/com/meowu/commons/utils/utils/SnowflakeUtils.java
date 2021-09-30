@@ -2,6 +2,7 @@ package com.meowu.commons.utils.utils;
 
 import com.meowu.commons.utils.security.exception.SnowflakeException;
 
+
 public class SnowflakeUtils{
 
     private final long twepoch = 715017600000L;
@@ -65,7 +66,7 @@ public class SnowflakeUtils{
     }
 
     public String getId(){
-        return ((Long) nextId()).toString();
+        return String.valueOf(nextId());
     }
 
     private long tilNextMillis(long lastTimestamp){

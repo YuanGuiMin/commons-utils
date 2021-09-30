@@ -170,9 +170,9 @@ public class RSAUtils{
             cipher.init(Cipher.ENCRYPT_MODE, key);
 
             int blockSize = (size == KEY_SIZE_1024 ? MAX_1024_ENCRYPT_BLOCK_SIZE : MAX_2048_ENCRYPT_BLOCK_SIZE);
-            int length   = content.length;
-            int offset   = 0;
-            int index    = 0;
+            int length    = content.length;
+            int offset    = 0;
+            int index     = 0;
 
             byte[] buffer;
 
