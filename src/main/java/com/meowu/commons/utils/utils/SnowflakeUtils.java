@@ -2,7 +2,6 @@ package com.meowu.commons.utils.utils;
 
 import com.meowu.commons.utils.security.exception.SnowflakeException;
 
-
 public class SnowflakeUtils{
 
     private final long twepoch = 715017600000L;
