@@ -1,5 +1,6 @@
-package com.meowu.commons.utils.utils;
+package com.meowu.commons.utils;
 
+import com.meowu.commons.utils.utils.HostUtils;
 import org.junit.Test;
 
 import java.util.regex.Matcher;
