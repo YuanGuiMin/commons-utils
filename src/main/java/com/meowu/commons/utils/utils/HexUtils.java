@@ -5,7 +5,7 @@ public class HexUtils{
     public static String toString(byte[] content){
         AssertUtils.notEmpty(content, "content to string must not be null");
 
-        //result
+        // result
         StringBuilder sb = new StringBuilder();
 
         for(int i = 0; i < content.length; i++){
