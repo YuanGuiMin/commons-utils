@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 
 public class HostUtils{
 
-    private static final String HTTP_REGEX = "((?<scheme>(http|https))://)?(?<hostname>[a-zA-Z0-9\\.]+)(:(?<port>[0-9]+))?(?<path>[/a-zA-Z0-9\\._]+)?(\\?(?<query>\\S+))?";
+    private static final String HTTP_REGEX = "((?<scheme>(http|https))://)?(?<hostname>[a-zA-Z0-9\\.]+)(:(?<port>[0-9]+))?(?<path>[/a-zA-Z0-9\\._-]+)?(\\?(?<query>\\S+))?";
 
     public static Host parse(String url){
         AssertUtils.hasText(url, "url to parse must not be null");
@@ -31,7 +31,7 @@ public class HostUtils{
         String path     = matcher.group("path");
         String query    = matcher.group("query");
 
-        //create host information
+        // create host information
         Host host = new Host();
         host.setScheme(StringUtils.isBlank(scheme) ? "http": scheme);
         host.setHostname(hostname);
